@@ -16,3 +16,9 @@ console.log(myHashTable.keyMap);
 
 myHashTable.get("apple");
 console.log(myHashTable.get("apple"));
+
+const allKeys = myHashTable.keys();
+console.log(allKeys);
+
+const allValues = myHashTable.values();
+console.log(allValues);
