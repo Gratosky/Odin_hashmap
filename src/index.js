@@ -26,4 +26,11 @@ console.log(allValues);
 const delIndex = myHashTable.delete("apple");
 console.log(delIndex);
 
-console.log(myHashTable.clear());
+console.log(myHashTable.length());
+
+myHashTable.set("mint", "blue");
+myHashTable.set("avocado", "green");
+console.log(myHashTable.length());
+
+console.log(myHashTable.keyMap);
+myHashTable.set("moon", "silver");
