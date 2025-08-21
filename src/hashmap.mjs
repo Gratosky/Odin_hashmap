@@ -189,3 +189,35 @@ function getNextPrime(num) {
 
   return next;
 }
+
+//A class hashset to represent our hashtable in key only
+export class HashSet {
+  constructor(size = 53) {
+    this.table = new HashTable(size);
+  }
+
+  //Method to add a new value to the set
+  add(value) {
+    this.table.set(value, true);
+  }
+
+  //Method to check if value is present
+  has(value) {
+    return this.table.get(value) !== null;
+  }
+
+  //Method to delete a value from the set
+  delete(value) {
+    return this.table.delete(value);
+  }
+
+  //Method to return the size of the table
+  size() {
+    return this.table.length();
+  }
+
+  //Method to see the unique values
+  values() {
+    return this.table.keys();
+  }
+}

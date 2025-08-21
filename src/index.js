@@ -1,4 +1,5 @@
 import { HashTable } from "./hashmap.mjs";
+import { HashSet } from "./hashmap.mjs";
 
 const myHash = new HashTable();
 console.log(`The hash for "hello" is: ${myHash._hash("hello")}`);
@@ -32,5 +33,15 @@ myHashTable.set("mint", "blue");
 myHashTable.set("avocado", "green");
 console.log(myHashTable.length());
 
-console.log(myHashTable.keyMap);
 myHashTable.set("moon", "silver");
+console.log(myHashTable.keyMap);
+
+const myHashSet = new HashSet();
+
+console.log("Is 'apple' in the set?", myHashSet.has("apple"));
+myHashSet.add("apple");
+myHashSet.add("orange");
+myHashSet.add("banana");
+myHashSet.add("apple");
+
+console.log("All values in the set:", myHashSet.values());
