@@ -22,3 +22,8 @@ console.log(allKeys);
 
 const allValues = myHashTable.values();
 console.log(allValues);
+
+const delIndex = myHashTable.delete("apple");
+console.log(delIndex);
+
+console.log(myHashTable.clear());

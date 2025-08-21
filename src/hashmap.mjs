@@ -83,4 +83,27 @@ export class HashTable {
     }
     return total;
   }
+
+  //Method to delete a key, value pair from the hash table
+  delete(key) {
+    let index = this._hash(key);
+
+    if (!this.keyMap[index]) {
+      return null;
+    }
+
+    for (let i = 0; i < this.keyMap[index].length; i++) {
+      if (this.keyMap[index][i][0] === key) {
+        this.keyMap[index].splice(i, 1);
+        return true;
+      }
+    }
+    return false;
+  }
+
+  //Method to clear the hashtable
+  clear() {
+    this.keyMap = [];
+    return;
+  }
 }
